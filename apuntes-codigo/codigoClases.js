@@ -1,25 +1,27 @@
+
+// $(function(){
+
 // window.onload = function(){
-//     alert('loaded...');
-// };
+    //     alert('loaded...');
+    // };
 
-// var alerta = function (mensaje){
-//     alert(mensaje);
-// }
+    // var alerta = function (mensaje){
+    //     alert(mensaje);
+    // }
 
-// alerta('Hola Akin!')
+    // alerta('Hola Akin!')
 
-// $(document).ready(function(){
-//     alert('Ready!')
-// });
+    // $(document).ready(function(){
+    //     alert('Ready!')
+    // });
 
-// $.noConflict();
-// jQuery(document).ready(function($){
-//     // jQuery
-// });
+    // $.noConflict();
+    // jQuery(document).ready(function($){
+    //     // jQuery
+    // });
 
-//$ // prototype
+    //$ // prototype
 
-$(function(){
     // --------------------------------------------------------------------------
     // SELECTORES
     // --------------------------------------------------------------------------
@@ -98,7 +100,4 @@ $(function(){
     // }));
     // OTRA FORMA
     // $('<p>',{html: 'Me acaban de crear!'}).appendTo($('header#app-header'));
-
-    
-
-});
+// });

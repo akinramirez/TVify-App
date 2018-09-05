@@ -1,0 +1,40 @@
+Cabe mencionar que se tiene que tener antes instalado node y el gestor de paquetes npm
+
+Correr estos comandos desde la terminal
+- npm install --save jquery
+
+Instalar browserify
+- npm install --save-dev browserify
+
+Ejecutar scripts via npm (configurado en el package.json)
+- npm run build-js
+
+Instalar dependencia babelify y preset es2015
+* Antes de instalar estos paquetes es muy importante instalar este:
+- npm install --save-dev babel-core
+- npm install --save-dev babelify babel-preset-es2015
+
+Agregar el preset del babelify en package.json 
+- En la parte de scripts agregar lo siguiente:
+  - -t [ babelify --presets [ es2015] ]
+  
+  El archivo package.json tiene que quedar de la siguiente manera:
+  "scripts": {
+        "build-js": "browserify -t [ babelify --presets [ es2015] ] index.js  > app.js"
+    }
+
+- Ejecutar nuevamente el comando npm rum build-js para obtener el nuevo resultado con el codigo compilado a es2015
+
+Instalar pequeño server web
+- npm install --save serve
+
+Instalar page (navegar entre paginas y paginas en el sitio)
+- npm install --save page
+
+Instalar dependencia qs (querystring) (leer lo que nos envian por parametro)
+- npm install --save qs
+
+
+
+
+  
