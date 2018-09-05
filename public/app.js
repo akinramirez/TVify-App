@@ -12393,7 +12393,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var productionEnv = !!~window.location.host.indexOf('github.io');
 
 if (productionEnv) {
-  _page2.default.base('/tvify');
+  _page2.default.base('/tvify/');
 }
 
 (0, _page2.default)();
