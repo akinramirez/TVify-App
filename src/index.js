@@ -18,7 +18,7 @@ page('/', function (ctx, next) {
     } else {
       renderShows(JSON.parse(localStorage.shows));
     }
-  })
+});
 
 page('/search',function(ctx, next){
   $tvShowsContainer.find('.tv-show').remove();
@@ -34,4 +34,10 @@ page('/search',function(ctx, next){
     });
 });
 
-page();
+var productionEnv = !!~window.location.host.indexOf('github.io')
+
+if (productionEnv) {
+  page.base('/tvify')
+}
+
+page()

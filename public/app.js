@@ -12390,6 +12390,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   });
 });
 
+var productionEnv = !!~window.location.host.indexOf('github.io');
+
+if (productionEnv) {
+  _page2.default.base('/tvify');
+}
+
 (0, _page2.default)();
 
 },{"./render":10,"./search-form":11,"./tv-shows-container":12,"./tvmaze-api-client":13,"jquery":1,"page":2,"qs":5}],10:[function(require,module,exports){
@@ -12499,7 +12505,7 @@ var _jquery2 = _interopRequireDefault(_jquery);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function getShows(fn) {
-    _jquery2.default.ajax('http://api.tvmaze.com/shows', {
+    _jquery2.default.ajax('https://api.tvmaze.com/shows', {
         success: function success(shows, textStatus, xhr) {
             fn(shows);
         }
@@ -12507,7 +12513,7 @@ function getShows(fn) {
 }
 
 function searchShows(busqueda, fn) {
-    _jquery2.default.ajax('http://api.tvmaze.com/search/shows', {
+    _jquery2.default.ajax('https://api.tvmaze.com/search/shows', {
         data: busqueda,
         success: function success(res, textStatus, xhr) {
             fn(res);
